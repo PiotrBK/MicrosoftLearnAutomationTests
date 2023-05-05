@@ -1,19 +1,23 @@
 package org.testing.automation.homepage;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.testing.automation.pages.HomePage;
-//import org.testing.automation.Page;
+import org.testing.automation.Browser;
+import org.testing.automation.Pages
+
 public class IsAtHomepageTest {
 
     @Test
     public void canGoToHomePage(){
-        HomePage homepage = new HomePage();
-        homepage.goTo();
-        Assertions.assertTrue(homepage.isAt());
 
+        Pages.homePage().goTo();
+        Assertions.assertTrue(Pages.homePage().isAt());
 
     }
-
+    @AfterAll
+    public static void cleanup(){
+        Browser.close();
+    }
 
 }
