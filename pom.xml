@@ -18,8 +18,9 @@
     <dependencies>
         <dependency>
             <groupId>org.testing.automation</groupId>
-            <artifactId>MicrosoftAutomationTests</artifactId>
+            <artifactId>MicrosoftAutomationFramework</artifactId>
             <version>1.0-SNAPSHOT</version>
+
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
