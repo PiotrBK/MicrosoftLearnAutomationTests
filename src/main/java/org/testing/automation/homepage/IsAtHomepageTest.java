@@ -15,9 +15,5 @@ public class IsAtHomepageTest {
         Assertions.assertTrue(Pages.homePage().isAt());
 
     }
-    @AfterAll
-    public static void cleanup(){
-        Browser.close();
-    }
 
 }
