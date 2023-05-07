@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.testing.automation.Browser;
-import org.testing.automation.Pages;
+
 import java.util.HashMap;
 import java.util.Map;
 
