@@ -32,7 +32,7 @@ public class SearchTest {
         HomePage homePage = new HomePage(browser.driver);
         homePage.goTo();
         browser.driver.findElement(By.id("welcome-page-search-form-autocomplete-input")).click();
-        browser.driver.findElement(By.id("welcome-page-search-form-autocomplete-input")).sendKeys("Azure");
+        browser.driver.findElement(By.id("welcome-page-search-form-autocomplete-input")).sendKeys("Azure AI Certification");
         browser.driver.findElement(By.id("welcome-page-search-form-autocomplete-input")).sendKeys(Keys.ENTER);
 
     }
