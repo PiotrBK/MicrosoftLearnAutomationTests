@@ -1,18 +1,30 @@
 package org.testing.automation.homepage;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.testing.automation.Browser;
-import org.testing.automation.Pages;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testing.automation.pages.HomePage;
 
 public class IsAtHomepageTest {
+
+    WebDriver driver;
+
+    @BeforeEach
+    public void setUp(){
+        driver = new ChromeDriver();
+
+
+    }
 
     @Test
     public void canGoToHomePage(){
 
-        Pages.homePage().goTo();
-        Assertions.assertTrue(Pages.homePage().isAt());
+        HomePage homePage = new HomePage(driver);
+        homePage.goTo();
+        Assertions.assertTrue(homePage.isAt());
 
     }
 

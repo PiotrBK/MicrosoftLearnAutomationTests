@@ -7,7 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.testing.automation.Browser;
-import org.testing.automation.Pages;
+import org.testing.automation.pages.HomePage;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,9 +29,10 @@ public class SearchTest {
     @Test
     public void searching() {
 
-        Pages.homePage().goTo();
+        HomePage homePage = new HomePage(browser.driver);
+        homePage.goTo();
         browser.driver.findElement(By.id("welcome-page-search-form-autocomplete-input")).click();
-        browser.driver.findElement(By.id("welcome-page-search-form-autocomplete-input")).sendKeys("Azure");
+        browser.driver.findElement(By.id("welcome-page-search-form-autocomplete-input")).sendKeys("Azure AI Certification");
         browser.driver.findElement(By.id("welcome-page-search-form-autocomplete-input")).sendKeys(Keys.ENTER);
 
     }
