@@ -1,5 +1,3 @@
-package org.testing.automation.homepage;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
