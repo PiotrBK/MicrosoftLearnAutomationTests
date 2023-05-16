@@ -1,21 +1,21 @@
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testing.automation.Cleanup;
+import org.testing.automation.Setup;
 import org.testing.automation.pages.HomePage;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
 public class IsAtHomepageTest {
 
-    WebDriver driver;
+    private WebDriver driver;
 
-    @BeforeMethod
-    public void setUp(){
-        driver = new ChromeDriver();
-
-
+    @BeforeTest
+    public void setup(){
+        driver = Setup.setUp();
     }
 
     @Test
@@ -27,4 +27,8 @@ public class IsAtHomepageTest {
 
     }
 
+    @AfterTest
+    public void cleanup(){
+        Cleanup.cleanup(driver);
+    }
 }
