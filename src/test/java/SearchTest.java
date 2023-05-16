@@ -1,19 +1,17 @@
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testing.automation.pages.HomePage;
 import org.testing.automation.pages.SearchPage;
+import org.testng.annotations.*;
 
 public class SearchTest {
 
 
     static WebDriver driver;
 
-    @BeforeAll
+    @BeforeTest
     public static void setUp() {
 
         driver = new ChromeDriver();
@@ -30,7 +28,7 @@ public class SearchTest {
 
     }
 
-    @AfterAll
+    @AfterTest
     public static void cleanup(){
         driver.manage().deleteAllCookies();
         driver.close();

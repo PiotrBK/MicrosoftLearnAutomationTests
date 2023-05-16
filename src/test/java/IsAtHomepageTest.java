@@ -1,16 +1,17 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testing.automation.pages.HomePage;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
 
 public class IsAtHomepageTest {
 
     WebDriver driver;
 
-    @BeforeEach
+    @BeforeMethod
     public void setUp(){
         driver = new ChromeDriver();
 
@@ -22,7 +23,7 @@ public class IsAtHomepageTest {
 
         HomePage homePage = new HomePage(driver);
         homePage.goTo();
-        Assertions.assertTrue(homePage.isAt());
+        Assert.assertTrue(homePage.isAt());
 
     }
 
