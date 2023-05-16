@@ -9,6 +9,7 @@ import org.testing.automation.pages.SearchPage;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+
 public class SearchTest {
 
     private WebDriver driver;
@@ -19,7 +20,7 @@ public class SearchTest {
     }
 
     @Test
-    public void searching() {
+    public void searching(){
 
         HomePage homePage = new HomePage(driver);
         homePage.goTo();
