@@ -1,3 +1,4 @@
+package org.testing.automation.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.testing.automation.Cleanup;
