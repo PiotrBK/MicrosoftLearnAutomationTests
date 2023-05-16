@@ -27,7 +27,7 @@ public class SearchTest {
         SearchPage searchpage = new SearchPage(driver);
         searchpage.clickCertyfikaty();
         searchpage.clickFirstResult();
-        Assert.assertTrue(driver.getCurrentUrl().equals("https://learn.microsoft.com/en-us/certifications/exams/ai-900/"));
+        Assert.assertEquals(driver.getCurrentUrl(), "https://learn.microsoft.com/en-us/certifications/exams/ai-900/");
     }
 
     @AfterTest
