@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.testing.automation.Cleanup;
 import org.testing.automation.Setup;
 import org.testing.automation.pages.HomePage;
-import org.testing.automation.pages.SearchPage;
 import org.testng.annotations.*;
 
 public class SearchTest {
